@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Assignment News</string>
+    <string name="default_error">Ooops. We detected error.</string>
+    <string name="comments">Comments</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/LightGrey"
+    tools:ignore="ExtraText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height_100"
+        android:layout_marginTop="@dimen/row_margin_3"
+        android:layout_marginBottom="@dimen/row_margin_3"
+        android:layout_marginLeft="@dimen/row_margin_6"
+        android:layout_marginRight="@dimen/row_margin_6"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/space_10"
+        android:paddingLeft="@dimen/space_10"
+        android:background="@drawable/rounded_background">
+
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="@dimen/space_30"
+            android:layout_height="@dimen/space_30"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_margin="@dimen/margin_10" />
+
+        <TextView
+            android:id="@+id/postTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/userImage"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            tools:text="This is title dasdnlaksn dasdkljaslkdjlkasjdklajsdlkjaskldj daslkdkasjdkjasdlkasd" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
