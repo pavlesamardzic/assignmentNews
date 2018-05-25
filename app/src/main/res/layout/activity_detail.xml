@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.detail.DetailActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/row_margin_3"
+        android:layout_marginLeft="@dimen/row_margin_6"
+        android:layout_marginRight="@dimen/row_margin_6"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:orientation="vertical">
-        
+
         <TextView
             android:id="@+id/tvTitle"
             android:layout_marginTop="10dp"
@@ -21,7 +25,7 @@
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/holo_blue_dark"
             tools:text="quas fugiat ut perspiciatis vero provident" />
 
         <TextView
@@ -39,29 +43,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:padding="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/tvNumberOfComments"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_blue_dark"
                 tools:text="Comments (3)" />
 
             <TextView
                 android:id="@+id/tvUsername"
-                android:gravity="right"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
                 android:textColor="@android:color/black"
-                tools:text="Pavle" />
+                android:textStyle="bold|italic"
+                tools:text="Pavle Samardzic" />
+
 
         </LinearLayout>
 
-    </LinearLayout>
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
+            tools:showIn="@layout/activity_main"
+            tools:context=".ui.activity.main.MainActivity">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/commentsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

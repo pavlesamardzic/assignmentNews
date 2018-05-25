@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.pavlesamardzic.assignmentnews.R
+import com.pavlesamardzic.assignmentnews.data.Comment
 import com.pavlesamardzic.assignmentnews.data.Post
 import com.pavlesamardzic.assignmentnews.ui.BaseActivity
 import com.pavlesamardzic.assignmentnews.ui.activity.detail.DetailActivity
