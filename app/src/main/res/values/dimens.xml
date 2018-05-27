@@ -10,4 +10,5 @@
     <dimen name="text_size_16">16sp</dimen>
     <dimen name="marginRight">5dp</dimen>
     <dimen name="marginLeft">5dp</dimen>
+    <dimen name="space_50">50dp</dimen>
 </resources>

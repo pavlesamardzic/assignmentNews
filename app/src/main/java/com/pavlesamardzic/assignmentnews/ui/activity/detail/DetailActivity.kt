@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.MenuItem
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.pavlesamardzic.assignmentnews.R
 import com.pavlesamardzic.assignmentnews.data.Comment
 import com.pavlesamardzic.assignmentnews.data.Post
@@ -63,6 +65,10 @@ class DetailActivity : BaseActivity(), DetailResults {
 
     override fun onSuccessGetAuthor(user: User) {
         this.tvUsername.text = user.username
+        var url: String = Utils.BASE_ADORABLE_URL + Utils.BIG_ADORABLE_SIZE + user.email
+        Glide.with(this)
+                .load(url)
+                .into(this.userImage);
     }
 
     override fun onSuccessGetComments(comments: ArrayList<Comment>) {

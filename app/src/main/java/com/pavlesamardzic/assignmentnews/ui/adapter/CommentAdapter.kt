@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.pavlesamardzic.assignmentnews.R
 import com.pavlesamardzic.assignmentnews.data.Comment
 import com.pavlesamardzic.assignmentnews.ui.activity.main.PostsListResults
+import com.pavlesamardzic.assignmentnews.util.Utils
 import kotlinx.android.synthetic.main.comment_list_row.view.*
 import kotlinx.android.synthetic.main.news_list_row.view.*
 
@@ -28,6 +30,10 @@ class CommentAdapter(val context: Context, var comments: ArrayList<Comment>) : R
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val comment: Comment = comments.get(position)
         val body = comment.body
+        var url: String = Utils.BASE_ADORABLE_URL + Utils.SMALL_ADORABLE_SIZE + comment.email
+        Glide.with(context)
+                .load(url)
+                .into(holder?.commentUserImage);
 
         holder?.commentContent?.text = body
     }
@@ -35,5 +41,6 @@ class CommentAdapter(val context: Context, var comments: ArrayList<Comment>) : R
     class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
         // Holds the TextView that will add each animal to
         val commentContent = view.commentContent
+        val commentUserImage = view.commentUserImage
     }
 }

@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.pavlesamardzic.assignmentnews.R
 import com.pavlesamardzic.assignmentnews.data.Post
 import com.pavlesamardzic.assignmentnews.ui.activity.main.PostsListResults
+import com.pavlesamardzic.assignmentnews.util.Utils
 import kotlinx.android.synthetic.main.news_list_row.view.*
 
 class NewsAdapter(val context: Context, var posts: ArrayList<Post>, val postsListResults: PostsListResults) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
@@ -30,7 +32,11 @@ class NewsAdapter(val context: Context, var posts: ArrayList<Post>, val postsLis
 
         holder?.postTitle?.text = title
         holder.mView.setOnClickListener { postsListResults.onItemClick(post) }
-        // todo: add image later
+
+        var url: String = Utils.BASE_ADORABLE_URL + Utils.SMALL_ADORABLE_SIZE + post.userEmail
+        Glide.with(context)
+                .load(url)
+                .into(holder?.userImage);
     }
 
     class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {

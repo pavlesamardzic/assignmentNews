@@ -21,8 +21,8 @@
 
         <ImageView
             android:id="@+id/userImage"
-            android:layout_width="@dimen/space_30"
-            android:layout_height="@dimen/space_30"
+            android:layout_width="@dimen/space_50"
+            android:layout_height="@dimen/space_50"
             android:layout_centerVertical="true"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
